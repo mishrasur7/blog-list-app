@@ -8,7 +8,7 @@
 
 2.  **Install dependencies in the project**
 
-    Open two terminal windows in your favorite editor for example Visual Studio Code and navigate into your project's directory and start it up.
+    Open two terminal windows in your favorite editor for example Visual Studio Code and navigate into your project's directory and install dependencies.
 
 ```shell
 cd client
