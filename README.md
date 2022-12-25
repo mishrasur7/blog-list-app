@@ -8,15 +8,11 @@
 
 2.  **Navigate and install dependencies in the project**
 
-    Open two terminal windows in your favorite editor for example Visual Studio Code and navigate into your project's directory with command
+    Open two terminal windows in your favorite editor, navigate and install dependencies
     
 ```shell
 cd blog-list-app-fullstack
-```
 
-    In both of the terminal windows and install dependencies as follows by navigating in each directories
-
-```shell
 cd client
 then run: npm install
 cd server 
