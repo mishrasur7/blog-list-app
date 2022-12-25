@@ -20,16 +20,16 @@ then run: npm install
 3.  **Start developing project.**
 
 ```shell
-    Run server with cmd: `npm run dev`
-    Run client with cmd: `npm run start`
+    Run server with cmd: npm run dev
+    Run client with cmd: npm run start
 ```
 
 Your site is now running at <a href="http://localhost:3000">http://localhost:3000</a>.!
 
-Registering new users through client is not yet available but you can test with following credentials:
+Registering new users through client is not yet available but you can test by logging with following credentials:
 
 ```shell
-    Run server with cmd: `npm run dev`
-    Run client with cmd: `npm run start`
+    username: missuraj
+    password: suraj
 ```
 <strong>Enjoy!!!</strong>
