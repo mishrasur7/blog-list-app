@@ -12,7 +12,8 @@
     
 ```shell
 cd blog-list-app-fullstack
-
+```
+```shell
 cd client
 then run: npm install
 cd server 
