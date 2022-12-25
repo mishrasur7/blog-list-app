@@ -13,7 +13,7 @@
 ```shell
 cd blog-list-app-fullstack
 ```
-In both of the terminal windows and install dependencies as follows by navigating in each directories
+    In both of the terminal windows and install dependencies as follows by navigating in each directories
 
 ```shell
 cd client
