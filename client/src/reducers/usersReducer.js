@@ -11,6 +11,9 @@ const usersSlice = createSlice({
     setUsers(state, action) {
       return action.payload;
     },
+    create(state, action) {
+      return [...state, action.payload]
+    }
   },
 });
 
@@ -20,6 +23,13 @@ export const initializeUsers = () => {
     dispatch(setUsers(users));
   };
 };
+
+export const createUser = (user) => {
+  return async (dispatch) => {
+    const newUser = await userService.register(user)
+    dispatch(create(newUser))
+  }
+}
 
 export const { setUsers } = usersSlice.actions;
 export default usersSlice.reducer;
