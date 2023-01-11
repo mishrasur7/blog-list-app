@@ -14,6 +14,7 @@ import { removeUser, setUser } from "./reducers/currentuserReducer";
 import Users from "./components/Users";
 import User from "./components/User";
 import SingleBlog from "./components/SingleBlog";
+import Register from "./components/Register";
 
 const App = () => {
   const [username, setUsername] = useState("");
@@ -86,9 +87,14 @@ const App = () => {
                     <Button onClick={logOutUser}>Log out</Button>
                   </em>
                 ) : (
-                  <Link style={padding} to="/login">
-                    Login
-                  </Link>
+                  <span>
+                    <Link style={padding} to="/login">
+                      Login
+                    </Link>
+                    <Link style={padding} to="/register">
+                      Register
+                    </Link>
+                  </span>
                 )}
               </Nav.Link>
             </Nav>
@@ -128,6 +134,7 @@ const App = () => {
               />
             }
           />
+          <Route path="/register" element={<Register />}/>
         </Routes>
       </Router>
     </div>
