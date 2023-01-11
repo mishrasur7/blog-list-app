@@ -6,6 +6,12 @@ const getAll = async () => {
   return response.data;
 };
 
+const register = async (user) => {
+  const response = await axios.post(baseUrl, user)
+  return response.data
+}
+
 export default {
   getAll,
+  register
 };
