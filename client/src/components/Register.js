@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Form, Button } from "react-bootstrap";
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+
 import { registerUser } from '../reducers/usersReducer';
 
 const Register = () => {
@@ -9,6 +11,7 @@ const Register = () => {
     const [name, setName] = useState('')
 
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     const handleRegister = (event) => {
         event.preventDefault()
@@ -18,6 +21,7 @@ const Register = () => {
             name: name
         }
         dispatch(registerUser(user))
+        navigate('/login')
     }
 
   return (
