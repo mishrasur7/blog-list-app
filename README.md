@@ -29,10 +29,6 @@ then run: npm install
 
 Your site is now running at <a href="http://localhost:3000">http://localhost:3000</a>
 
-This application is in initial developing phase. Registering new users through client is not yet available but you can test by logging with following credentials:
+If you want to test the application please register and login with your user credentials!
 
-```shell
-    username: missuraj
-    password: suraj
-```
 <strong>Enjoy!!!</strong>
