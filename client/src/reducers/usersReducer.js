@@ -31,5 +31,5 @@ export const registerUser = (user) => {
   }
 }
 
-export const { setUsers } = usersSlice.actions;
+export const { setUsers, createUser } = usersSlice.actions;
 export default usersSlice.reducer;

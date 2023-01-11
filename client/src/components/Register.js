@@ -1,14 +1,23 @@
 import React, { useState } from 'react'
 import { Form, Button } from "react-bootstrap";
+import { useDispatch } from 'react-redux';
+import { registerUser } from '../reducers/usersReducer';
 
 const Register = () => {
-    const [username, setUsername] = useState()
-    const [password, setPassword] = useState()
-    const [name, setName] = useState()
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
+    const [name, setName] = useState('')
+
+    const dispatch = useDispatch()
 
     const handleRegister = (event) => {
         event.preventDefault()
-
+        const user = {
+            username: username,
+            password: password,
+            name: name
+        }
+        dispatch(registerUser(user))
     }
 
   return (
