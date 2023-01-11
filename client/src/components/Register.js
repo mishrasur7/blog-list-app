@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { Form, Button } from "react-bootstrap";
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { setNotification } from '../reducers/notificationReducer';
 
+import { setNotification } from '../reducers/notificationReducer';
 import { registerUser } from '../reducers/usersReducer';
 
 const Register = ({ setOperation }) => {
@@ -42,8 +42,8 @@ const Register = ({ setOperation }) => {
     }
 
   return (
-    <div>Register a new user using form below: 
-        <br />
+    <div>
+        <h4 style={{marginTop: 30, marginBottom: 20}}>Register a new user with the form below: </h4>
         <Form onSubmit={handleRegister}>
           <Form.Group>
             <Form.Label>username:</Form.Label>
