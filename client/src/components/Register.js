@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 import { Form, Button } from "react-bootstrap";
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { setNotification } from '../reducers/notificationReducer';
 
 import { registerUser } from '../reducers/usersReducer';
 
-const Register = () => {
+const Register = ({ setOperation }) => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [name, setName] = useState('')
@@ -20,8 +21,24 @@ const Register = () => {
             password: password,
             name: name
         }
-        dispatch(registerUser(user))
-        navigate('/login')
+        try {
+            dispatch(registerUser(user))
+            setUsername('')
+            setPassword('')
+            setName('')
+            navigate('/login')
+            setOperation(true)
+            dispatch(setNotification(`User ${user.name} created successfully!`))
+            setTimeout(() => {
+                dispatch(setNotification(null))
+            }, 5000);
+        } catch (exception) {
+            setOperation(false)
+            dispatch(setNotification(exception.response.data.error))
+            setTimeout(() => {
+                dispatch(setNotification(null))
+            }, 5000);
+        }
     }
 
   return (
