@@ -17,7 +17,6 @@ blogsRouter.post('/', middleware.userExtractor, async (request, response) => {
     response.status(400).end()
   }
 
-  console.log('user: ', request.user)
   const user = await User.findById(request.user.id)
 
   const blog = new Blog({
