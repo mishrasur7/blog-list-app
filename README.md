@@ -8,7 +8,7 @@
 
 2.  **Navigate and install dependencies in the project**
 
-    Open two terminal windows in your favorite editor, navigate and install dependencies
+    Split the terminal, navigate and install dependencies
     
 ```shell
 cd blog-list-app-fullstack
