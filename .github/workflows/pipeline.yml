@@ -13,6 +13,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - name: Install dependencies
+      - name: Install dependencies for client
         run: cd client && npm install
+      - name: Install dependencies for server
         run: cd server && npm install
