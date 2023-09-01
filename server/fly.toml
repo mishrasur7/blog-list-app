@@ -1,0 +1,20 @@
+# fly.toml app configuration file generated for misty-feather-4274 on 2023-09-01T15:12:37+03:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "misty-feather-4274"
+primary_region = "ams"
+
+[build]
+
+[env]
+  PORT = "3003"
+
+[http_service]
+  internal_port = 3003
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
